@@ -6,16 +6,23 @@
   <title>Portafolio | IA&Ai</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-  
+
 <body>
   <div class="container">
-    
+
     <!-- 🧭 MENÚ SUPERIOR -->
     <header>
       <div class="logo">IA&AI</div>
-      <nav class="menu">
+
+      <!-- BOTÓN HAMBURGUESA (SOLO MÓVILES) -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="menu" id="menu">
         <a href="#">Inicio</a>
-        <!-- <a href="#">Sobre mí</a> -->
         <a href="#" id="proyecto-ia">Proyectos</a>
         <a href="#" id="areas-interes">Áreas de Interés</a>
         <a href="#" id="Contacto">Contáctame</a>
@@ -28,7 +35,7 @@
         <h1>Bienvenido.</h1>
         <h2>Quién Soy</h2>
         <p>
-          Mi nombre es <strong>Jhon Aider</strong>, soy desarrollador front-end y creador del proyecto 
+          Mi nombre es <strong>Jhon Aider</strong>, soy desarrollador front-end y creador del proyecto
           <strong>IA&Ai</strong> — un compañero virtual inteligente que combina tecnología, empatía y diseño.
         </p>
         <p>
@@ -63,17 +70,17 @@
         <span id="cerrar" class="cerrar">&times;</span>
         <h2>IA&Ai – Compañero Virtual Inteligente</h2>
         <p>
-          IA&Ai Compañero Virtual Inteligente es una plataforma de inteligencia artificial que ofrece un avatar animado e interactivo, 
+          IA&Ai Compañero Virtual Inteligente es una plataforma de inteligencia artificial que ofrece un avatar animado e interactivo,
           diseñado para conversar, acompañar y apoyar emocionalmente a los usuarios.
         </p>
         <p>
-          Su objetivo es crear un amigo digital que pueda hablar, escuchar y aprender de cada persona, brindando compañía y reduciendo 
+          Su objetivo es crear un amigo digital que pueda hablar, escuchar y aprender de cada persona, brindando compañía y reduciendo
           la sensación de soledad o ansiedad social.
         </p>
       </div>
     </div>
 
-        <!-- 💻 MODAL ÁREAS DE INTERÉS -->
+    <!-- 💻 MODAL ÁREAS DE INTERÉS -->
     <div id="modal-interes" class="modal">
       <div class="modal-content">
         <span id="cerrar-interes" class="cerrar">&times;</span>
@@ -81,49 +88,50 @@
         <ul class="lista-interes">
           <li>Desarrollo Front-End</li>
           <li>Inteligencia Artificial y Chatbots</li>
-          <li>Diseño de Experiencia de Usuario (UX)</li>
+          <li>Diseño UX</li>
           <li>Tecnologías Web Modernas</li>
         </ul>
       </div>
     </div>
 
-    <!-- ⚙️ PIE DE PÁGINA (✅ ubicación correcta) -->
+    <!-- ⚙️ PIE DE PÁGINA -->
     <footer>
       <p>©2025 JhonAider.com | Todos los derechos reservados</p>
     </footer>
-  </div> <!-- cierre del .container -->
 
-
-    
-
-  </div>
+  </div> <!-- cierre container -->
 
   <!-- 📜 SCRIPTS -->
   <script>
+    // -------- MENÚ HAMBURGUESA --------
+    const hamburger = document.getElementById("hamburger");
+    const menuNav = document.getElementById("menu");
+
+    hamburger.addEventListener("click", () => {
+      menuNav.classList.toggle("activo");
+    });
+
     // -------- FORMULARIO DE CONTACTO --------
     const botonContacto = document.getElementById('Contacto');
     const modalContacto = document.getElementById('formulario-contacto');
     const cerrarContacto = modalContacto.querySelector('.cerrar');
 
-    // Abrir el formulario
     botonContacto.addEventListener('click', (e) => {
       e.preventDefault();
       modalContacto.style.display = 'block';
     });
 
-    // Cerrar al hacer clic en la X
     cerrarContacto.addEventListener('click', () => {
       modalContacto.style.display = 'none';
     });
 
-    // Cerrar al hacer clic fuera del formulario
     window.addEventListener('click', (e) => {
       if (e.target === modalContacto) {
         modalContacto.style.display = 'none';
       }
     });
 
-    // -------- MODAL DE PROYECTO --------
+    // -------- MODAL PROYECTO --------
     const modal = document.getElementById("modal");
     const abrir = document.getElementById("proyecto-ia");
     const cerrar = document.getElementById("cerrar");
@@ -143,7 +151,7 @@
       }
     });
 
-    // -------- MODAL DE ÁREAS DE INTERÉS --------
+    // -------- MODAL ÁREAS DE INTERÉS --------
     const modalInteres = document.getElementById("modal-interes");
     const abrirInteres = document.getElementById("areas-interes");
     const cerrarInteres = document.getElementById("cerrar-interes");
@@ -163,5 +171,6 @@
       }
     });
   </script>
+
 </body>
 </html>

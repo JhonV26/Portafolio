@@ -47,14 +47,6 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
-}
-
-/* Menú de navegación superior */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 60px;
   border-bottom: 1px solid #2a2a2a;
   padding-bottom: 10px;
 }
@@ -71,7 +63,6 @@ header {
   color: #b5a83f;
 }
 
-
 .logo {
   background: linear-gradient(135deg, #e0cf68, #a89d39);
   -webkit-background-clip: text;
@@ -82,14 +73,8 @@ header {
 
 nav a {
   color: #ccc;
-  margin-left: 17px;
   text-decoration: none;
-  font-size: 2rem;
   transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #fff;
 }
 
 /* Secciones principales */
@@ -99,58 +84,20 @@ main {
   gap: 60px;
 }
 
-.intro {
-  flex: 2;
-}
-
 .intro h1 {
   font-size: 4rem;
   color: #fff;
-  margin-bottom: 15px;
 }
 
 .intro p {
   line-height: 1.6;
-  font-size: 1rem;
   max-width: 400px;
   color: #bbb;
 }
 
-.projects {
-  flex: 1;
-}
-
-.projects h2 {
-  font-size: 1.4rem;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.projects ul {
-  list-style: none;
-  padding: 0;
-}
-
-.projects li {
-  margin-bottom: 10px;
-}
-
-.projects a {
-  color: #d1d1d1;
-  text-decoration: none;
-  padding: 5px 10px;
-  border: 1px solid transparent;
-  transition: all 0.3s;
-}
-
-.projects a:hover {
-  border: 1px solid #b5a83f;
-  color: #fff;
-}
-
-/* Ventana emergente (modal) */
+/* Modales */
 .modal {
-  display: none; /* Oculta por defecto */
+  display: none;
   position: fixed;
   z-index: 10;
   left: 0;
@@ -169,12 +116,6 @@ main {
   padding: 30px;
   max-width: 600px;
   color: #ddd;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.modal-content h2 {
-  color: #fff;
-  margin-top: 0;
 }
 
 .cerrar {
@@ -184,244 +125,70 @@ main {
   color: #b5a83f;
 }
 
-.cerrar:hover {
-  color: #fff;
-}
-
-/* Pie de página */
+/* Footer elegante */
 footer {
-  margin-top: 60px;
-  text-align: right;
-  font-size: 0.9rem;
-  color: #777;
-}
-
-.lista-interes {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 15px;
-}
-
-.lista-interes li {
-  background: #2a2a2a;
-  margin-bottom: 10px;
-  padding: 10px 15px;
-  border-radius: 8px;
-  border-left: 3px solid #b5a83f;
-}
-
-/* Estilo del modal (oculto al inicio) */
-.modal {
-  display: none; /* Oculto por defecto */
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.7);
-}
-
-/* Contenedor del contenido */
-.modal-content {
-  background-color: #1e1e1e;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #555;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 12px;
-  color: #fff;
-  box-shadow: 0 0 20px #000;
-}
-
-/* Botón de cerrar */
-.cerrar {
-  color: #f5c542;
-  float: right;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.cerrar:hover {
-  color: #fff;
-}
-
-/* Estilos del formulario */
-.modal form {
-  display: flex;
-  flex-direction: column;
-}
-
-.modal label {
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.modal input, .modal textarea {
-  background: #2a2a2a;
-  color: #fff;
-  border: 1px solid #555;
-  border-radius: 6px;
-  padding: 8px;
-}
-
-.modal button {
-  margin-top: 15px;
-  background: linear-gradient(45deg, #f5c542, #9d7d0c);
-  color: #000;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.modal button:hover {
-  transform: scale(1.05);
-}
-
-/* 📱 ———— RESPONSIVE DESIGN ———— */
-
-/* Tablets (pantallas medianas) */
-@media (max-width: 1024px) {
-  main {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .intro h1 {
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  .intro p {
-    max-width: 90%;
-    text-align: center;
-  }
-
-  .projects {
-    width: 100%;
-    text-align: center;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-}
-
-/* Móviles (pantallas pequeñas) */
-@media (max-width: 768px) {
-  body {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .container {
-    width: 100%;
-    max-width: 95%;
-    padding: 10px;
-  }
-
-  header {
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .logo {
-    font-size: 1.8rem;
-  }
-
-  nav a {
-    font-size: 1.5rem;
-    margin: 0 10px;
-  }
-
-  main {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .intro h1 {
-    font-size: 2.5rem;
-  }
-
-  .intro h2 {
-    font-size: 1.5rem;
-  }
-
-  .intro p {
-    font-size: 1rem;
-    text-align: justify;
-    max-width: 100%;
-  }
-
-  .projects h2 {
-    font-size: 1.2rem;
-  }
-
-  .projects a {
-    display: block;
-    margin: 8px 0;
-    padding: 8px;
-    font-size: 1rem;
-  }
-
-  footer {
-    text-align: center;
-    font-size: 0.8rem;
-  }
-
-  .modal-content {
-    width: 90%;
-    padding: 15px;
-    font-size: 0.9rem;
-  }
-}
-
-/* Muy pequeños (teléfonos compactos) */
-@media (max-width: 480px) {
-  .intro h1 {
-    font-size: 2rem;
-  }
-
-  .intro h2 {
-    font-size: 1.2rem;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  nav a {
-    font-size: 1.3rem;
-  }
-}
-
-
-/* =========================
-   🎯 FOOTER ELEGANTE
-========================= */
-footer{
   text-align: center;
   border-top: 1px solid #eee95f;
   transition: color 0.3s ease;
-} 
-
-/* Efecto hover (interacción sutil) */
-footer:hover {
-  color: #fff;
 }
 
-/* Efecto opcional si quieres animar el color del borde */
-footer:hover {
-  border-top-color: #b5a83f;
+/* ============================
+   📱 MENÚ HAMBURGUESA
+============================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
 
-html {
-  scroll-behavior: smooth;
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  header {
+    position: relative;
+    justify-content: center;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 10px;   /* AHORA ESTÁ A LA DERECHA */
+    top: 10px;
+}
+
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #1a1a1a;
+    margin-top: 15px;
+    border-radius: 10px;
+    transition: max-height 0.3s ease;
+  }
+
+  .menu.activo {
+    max-height: 300px;
+    padding: 15px 0;
+  }
+
+  .menu a {
+    padding: 10px 0;
+    font-size: 1.2rem;
+  }
 }
