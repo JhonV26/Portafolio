@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio | IA&Ai</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+  
+<body>
+  <div class="container">
+    
+    <!-- 🧭 MENÚ SUPERIOR -->
+    <header>
+      <div class="logo">IA&AI</div>
+      <nav class="menu">
+        <a href="#">Inicio</a>
+        <!-- <a href="#">Sobre mí</a> -->
+        <a href="#" id="proyecto-ia">Proyectos</a>
+        <a href="#" id="areas-interes">Áreas de Interés</a>
+        <a href="#" id="Contacto">Contáctame</a>
+      </nav>
+    </header>
+
+    <!-- 🧍 SECCIÓN PRINCIPAL -->
+    <main>
+      <section class="intro" id="sobre-mi">
+        <h1>Bienvenido.</h1>
+        <h2>Quién Soy</h2>
+        <p>
+          Mi nombre es <strong>Jhon Aider</strong>, soy desarrollador front-end y creador del proyecto 
+          <strong>IA&Ai</strong> — un compañero virtual inteligente que combina tecnología, empatía y diseño.
+        </p>
+        <p>
+          Me apasiona crear experiencias web modernas, visualmente atractivas, con interfaces precisas y usabilidad intuitiva.
+        </p>
+      </section>
+    </main>
+
+    <!-- 📨 FORMULARIO DE CONTACTO -->
+    <div id="formulario-contacto" class="modal">
+      <div class="modal-content">
+        <span class="cerrar">&times;</span>
+        <h2>Contáctame</h2>
+        <form>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- 💡 MODAL DE PROYECTO -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="cerrar" class="cerrar">&times;</span>
+        <h2>IA&Ai – Compañero Virtual Inteligente</h2>
+        <p>
+          IA&Ai Compañero Virtual Inteligente es una plataforma de inteligencia artificial que ofrece un avatar animado e interactivo, 
+          diseñado para conversar, acompañar y apoyar emocionalmente a los usuarios.
+        </p>
+        <p>
+          Su objetivo es crear un amigo digital que pueda hablar, escuchar y aprender de cada persona, brindando compañía y reduciendo 
+          la sensación de soledad o ansiedad social.
+        </p>
+      </div>
+    </div>
+
+        <!-- 💻 MODAL ÁREAS DE INTERÉS -->
+    <div id="modal-interes" class="modal">
+      <div class="modal-content">
+        <span id="cerrar-interes" class="cerrar">&times;</span>
+        <h2>Mis Áreas de Interés</h2>
+        <ul class="lista-interes">
+          <li>Desarrollo Front-End</li>
+          <li>Inteligencia Artificial y Chatbots</li>
+          <li>Diseño de Experiencia de Usuario (UX)</li>
+          <li>Tecnologías Web Modernas</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ⚙️ PIE DE PÁGINA (✅ ubicación correcta) -->
+    <footer>
+      <p>©2025 JhonAider.com | Todos los derechos reservados</p>
+    </footer>
+  </div> <!-- cierre del .container -->
+
+
+    
+
+  </div>
+
+  <!-- 📜 SCRIPTS -->
+  <script>
+    // -------- FORMULARIO DE CONTACTO --------
+    const botonContacto = document.getElementById('Contacto');
+    const modalContacto = document.getElementById('formulario-contacto');
+    const cerrarContacto = modalContacto.querySelector('.cerrar');
+
+    // Abrir el formulario
+    botonContacto.addEventListener('click', (e) => {
+      e.preventDefault();
+      modalContacto.style.display = 'block';
+    });
+
+    // Cerrar al hacer clic en la X
+    cerrarContacto.addEventListener('click', () => {
+      modalContacto.style.display = 'none';
+    });
+
+    // Cerrar al hacer clic fuera del formulario
+    window.addEventListener('click', (e) => {
+      if (e.target === modalContacto) {
+        modalContacto.style.display = 'none';
+      }
+    });
+
+    // -------- MODAL DE PROYECTO --------
+    const modal = document.getElementById("modal");
+    const abrir = document.getElementById("proyecto-ia");
+    const cerrar = document.getElementById("cerrar");
+
+    abrir.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.style.display = "flex";
+    });
+
+    cerrar.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    // -------- MODAL DE ÁREAS DE INTERÉS --------
+    const modalInteres = document.getElementById("modal-interes");
+    const abrirInteres = document.getElementById("areas-interes");
+    const cerrarInteres = document.getElementById("cerrar-interes");
+
+    abrirInteres.addEventListener("click", (e) => {
+      e.preventDefault();
+      modalInteres.style.display = "flex";
+    });
+
+    cerrarInteres.addEventListener("click", () => {
+      modalInteres.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modalInteres) {
+        modalInteres.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
