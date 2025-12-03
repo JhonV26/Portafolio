@@ -1,176 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio | IA&Ai</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio IA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container">
 
-    <!-- 🧭 MENÚ SUPERIOR -->
-    <header>
-      <div class="logo">IA&AI</div>
+<!-- ============================
+     ⭐ HEADER
+============================= -->
+<header>
+  <div class="logo">IA&AI</div>
 
-      <!-- BOTÓN HAMBURGUESA (SOLO MÓVILES) -->
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <nav class="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#interes">Temas de Interés</a>
+      <a href="#contacto">Contáctame</a>
+  </nav>
 
-      <nav class="menu" id="menu">
-        <a href="#">Inicio</a>
-        <a href="#" id="proyecto-ia">Proyectos</a>
-        <a href="#" id="areas-interes">Áreas de Interés</a>
-        <a href="#" id="Contacto">Contáctame</a>
-      </nav>
-    </header>
+  <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+  </div>
+</header>
 
-    <!-- 🧍 SECCIÓN PRINCIPAL -->
-    <main>
-      <section class="intro" id="sobre-mi">
-        <h1>Bienvenido.</h1>
-        <h2>Quién Soy</h2>
-        <p>
-          Mi nombre es <strong>Jhon Aider</strong>, soy desarrollador front-end y creador del proyecto
-          <strong>IA&Ai</strong> — un compañero virtual inteligente que combina tecnología, empatía y diseño.
-        </p>
-        <p>
-          Me apasiona crear experiencias web modernas, visualmente atractivas, con interfaces precisas y usabilidad intuitiva.
-        </p>
+
+<!-- ============================
+     ⭐ INICIO / BIENVENIDA
+============================= -->
+<section class="intro bienvenidos" id="sobre-mi">
+        <div class="texto-bienvenida">
+          <h1>Bienvenido.</h1>
+          <h2>Quién Soy</h2>
+          <p>Mi nombre es <strong>Jhon Aider</strong>, desarrollador front-end y creador del proyecto <strong>IA&Ai</strong>.</p>
+          <p>Me apasiona crear experiencias web modernas, visualmente atractivas y usables.</p>
+        </div>
+        <div class="imagen-bienvenida">
+          <img src="imagen-ia.png" class="img-bienvenida" alt="IA">
+        </div>
       </section>
-    </main>
 
-    <!-- 📨 FORMULARIO DE CONTACTO -->
-    <div id="formulario-contacto" class="modal">
-      <div class="modal-content">
-        <span class="cerrar">&times;</span>
-        <h2>Contáctame</h2>
-        <form>
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
 
-          <label for="email">Correo electrónico:</label>
-          <input type="email" id="email" name="email" required>
+<!-- ============================
+     ⭐ PROYECTOS (SLIDER)
+============================= -->
+<section id="proyectos" class="proyectos-section">
+  <h2 class="section-title">🚀 Mis Proyectos</h2>
 
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+  <div class="slider-container">
+    <button class="slider-btn prev">◀</button>
 
-          <button type="submit">Enviar</button>
-        </form>
+    <div class="slider">
+
+      <!-- Proyecto 1 -->
+      <div class="slide">
+        <h3>Entrenando a la IA</h3>
+        <p>IA generativa que crea ideas, textos y metáforas bajo métricas controladas.</p>
+        <span class="tag">Python • Transformers • Embeddings</span>
       </div>
+
+      <!-- Proyecto 2 -->
+      <div class="slide">
+        <h3>Asistente Animado IA&AI</h3>
+        <p>Avatar interactivo para acompañar a usuarios mediante IA conversacional.</p>
+        <span class="tag">AI • Avatar • Chatbot</span>
+      </div>
+
+      <!-- Proyecto 3 -->
+      <div class="slide">
+        <h3>Historial de Temperaturas</h3>
+        <p>Detector de temperaturas con almacenamiento en archivo TXT automático.</p>
+        <span class="tag">Python • Sensores • Automatización</span>
+      </div>
+
     </div>
 
-    <!-- 💡 MODAL DE PROYECTO -->
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span id="cerrar" class="cerrar">&times;</span>
-        <h2>IA&Ai – Compañero Virtual Inteligente</h2>
-        <p>
-          IA&Ai Compañero Virtual Inteligente es una plataforma de inteligencia artificial que ofrece un avatar animado e interactivo,
-          diseñado para conversar, acompañar y apoyar emocionalmente a los usuarios.
-        </p>
-        <p>
-          Su objetivo es crear un amigo digital que pueda hablar, escuchar y aprender de cada persona, brindando compañía y reduciendo
-          la sensación de soledad o ansiedad social.
-        </p>
-      </div>
-    </div>
+    <button class="slider-btn next">▶</button>
+  </div>
+</section>
 
-    <!-- 💻 MODAL ÁREAS DE INTERÉS -->
-    <div id="modal-interes" class="modal">
-      <div class="modal-content">
-        <span id="cerrar-interes" class="cerrar">&times;</span>
-        <h2>Mis Áreas de Interés</h2>
-        <ul class="lista-interes">
-          <li>Desarrollo Front-End</li>
-          <li>Inteligencia Artificial y Chatbots</li>
-          <li>Diseño UX</li>
-          <li>Tecnologías Web Modernas</li>
-        </ul>
-      </div>
-    </div>
 
-    <!-- ⚙️ PIE DE PÁGINA -->
-    <footer>
-      <p>©2025 JhonAider.com | Todos los derechos reservados</p>
-    </footer>
 
-  </div> <!-- cierre container -->
+<!-- ============================
+     ⭐ TEMAS DE INTERÉS
+============================= -->
+<section id="interes" class="interes-section">
+  <h2 class="section-title">✨ Temas de Interés</h2>
 
-  <!-- 📜 SCRIPTS -->
-  <script>
-    // -------- MENÚ HAMBURGUESA --------
-    const hamburger = document.getElementById("hamburger");
-    const menuNav = document.getElementById("menu");
+  <div class="interes-grid">
+    <div class="interes-card"><h3>Inteligencia Artificial</h3><p>Modelos, prompts y embeddings.</p></div>
+    <div class="interes-card"><h3>Desarrollo Web</h3><p>Animaciones, estilos modernos y UI.</p></div>
+    <div class="interes-card"><h3>IA Creativa</h3><p>Generación de ideas, metáforas, conceptos.</p></div>
+    <div class="interes-card"><h3>Data Science</h3><p>Análisis semántico y visualización.</p></div>
+  </div>
+</section>
 
-    hamburger.addEventListener("click", () => {
-      menuNav.classList.toggle("activo");
-    });
 
-    // -------- FORMULARIO DE CONTACTO --------
-    const botonContacto = document.getElementById('Contacto');
-    const modalContacto = document.getElementById('formulario-contacto');
-    const cerrarContacto = modalContacto.querySelector('.cerrar');
 
-    botonContacto.addEventListener('click', (e) => {
-      e.preventDefault();
-      modalContacto.style.display = 'block';
-    });
+<!-- ============================
+     ⭐ CONTACTO
+============================= -->
+<section id="contacto" class="contacto">
+    <h2 class="section-title">📩 Contáctame</h2>
 
-    cerrarContacto.addEventListener('click', () => {
-      modalContacto.style.display = 'none';
-    });
+    <!-- Formulario de contacto -->
+    <form action="https://formsubmit.co/jhon26vasquezm@gmail.com" method="POST">
 
-    window.addEventListener('click', (e) => {
-      if (e.target === modalContacto) {
-        modalContacto.style.display = 'none';
-      }
-    });
+        <!-- Evitar captcha -->
+        <input type="hidden" name="_captcha" value="false">
 
-    // -------- MODAL PROYECTO --------
-    const modal = document.getElementById("modal");
-    const abrir = document.getElementById("proyecto-ia");
-    const cerrar = document.getElementById("cerrar");
+        <!-- Redireccionar después de enviar -->
+        <input type="hidden" name="_next" value="https://tu-dominio.com/">
 
-    abrir.addEventListener("click", (e) => {
-      e.preventDefault();
-      modal.style.display = "flex";
-    });
+        <!-- Campos del formulario -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
 
-    cerrar.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
+        <label for="correo">Correo:</label>
+        <input type="email" name="correo" id="correo" required>
 
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-      }
-    });
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
 
-    // -------- MODAL ÁREAS DE INTERÉS --------
-    const modalInteres = document.getElementById("modal-interes");
-    const abrirInteres = document.getElementById("areas-interes");
-    const cerrarInteres = document.getElementById("cerrar-interes");
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Enviar</button>
+    </form>
+</section>
 
-    abrirInteres.addEventListener("click", (e) => {
-      e.preventDefault();
-      modalInteres.style.display = "flex";
-    });
 
-    cerrarInteres.addEventListener("click", () => {
-      modalInteres.style.display = "none";
-    });
 
-    window.addEventListener("click", (e) => {
-      if (e.target === modalInteres) {
-        modalInteres.style.display = "none";
-      }
-    });
-  </script>
 
+<script src="script.js"></script>
 </body>
 </html>
